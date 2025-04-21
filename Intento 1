@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Sitio Web Moderno</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    nav {
+      background-color: #222;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    nav li {
+      margin: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background: #555;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-left: 5px solid #2c5364;
+      padding-left: 10px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    /* Íconos */
+    .iconos {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .icono {
+      font-size: 3rem;
+      color: #2c5364;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Galería */
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .galeria img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Formulario */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input, textarea {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 0.75rem;
+      background-color: #2c5364;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #203a43;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+      }
+
+      .iconos {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabecera -->
+  <header>
+    <h1>Mi Sitio Web Elegante</h1>
+    <p>Un diseño moderno, completo y adaptable</p>
+  </header>
+
+  <!-- Navegación -->
+  <nav>
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- Sección Bienvenida -->
+    <section>
+      <h2>Bienvenido</h2>
+      <p>Gracias por visitar mi sitio. Aquí podrás explorar mis proyectos, conocer los servicios que ofrezco y ponerte en contacto fácilmente.</p>
+    </section>
+
+    <!-- Sección con Íconos -->
+    <section id="servicios">
+      <h2>Servicios</h2>
+      <div class="iconos">
+        <div>
+          <i class="fas fa-code icono"></i>
+          <p>Desarrollo Web</p>
+        </div>
+        <div>
+          <i class="fas fa-paint-brush icono"></i>
+          <p>Diseño Gráfico</p>
+        </div>
+        <div>
+          <i class="fas fa-mobile-alt icono"></i>
+          <p>Apps Móviles</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galería de Imágenes -->
+    <section id="galeria">
+      <h2>Galería</h2>
+      <div class="galeria">
+        <img src="https://via.placeholder.com/300x200" alt="Proyecto 1">
+        <img src="https://via.placeholder.com/300x200" alt="Proyecto 2">
+        <img src="https://via.placeholder.com/300x200" alt="Proyecto 3">
+        <img src="https://via.placeholder.com/300x200" alt="Proyecto 4">
+      </div>
+    </section>
+
+    <!-- Formulario de Contacto -->
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form>
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu correo electrónico" required>
+        <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
